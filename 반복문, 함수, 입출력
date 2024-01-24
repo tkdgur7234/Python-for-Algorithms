@@ -1,0 +1,57 @@
+# for문
+print("-----------------------")
+print("# for문")
+# for i in range(시작값, 끝값+1)
+for i in range(5):  # range(0, 5)
+  pass
+# range()메서드에 인자가 하나임을 이용한 리스트, 튜플 참조법
+for i in a:
+  pass
+
+# 함수
+print("-----------------------")
+print("# 함수")
+# 일반적 메서드 구현
+def add(a,b):
+  return a+b
+print(add(b=3, a=7))  # 매개변수 지칭 가능(순서x)
+# 람다식을 통한 메서드 구현
+print((lambda a, b: a + b)(3, 7))
+# global = 함수 내 변수 선언(=지역변수)을 기존의 전역변수로 사용 가능하게끔
+a=0
+def func():
+  global a
+  a+=1
+func()
+print(a)
+
+# 입력
+print("-----------------------")
+print("# 입력")
+# 공백을 기준으로 입력 데이터 구분 = list(map(int, input().split())) 
+# 1. input()으로 문자열을 입력받음
+# 2. split()을 통해 입력된 문자열을 공백을 기준으로 나눠 리스트로 바꿈
+# 3. map()을 통해 리스트의 모든 원소에 int() 함수 적용 
+# map(함수, 리스트) = 리스트의 요소를 지정된 함수로 처리, 원본 리스트를 변경x, 새 리스트 생성)
+# 4. 최종 결과를 list()로 다시 바꿈
+print("# 공백을 기준으로 입력 데이터 구분 = list(map(int, input().split()))")
+print("n, m, k = map(int, input().split())")
+print("print(n,m,k)")
+
+print("-----------------------")
+# 입력을 최대한 빨리 받는 방법
+print("# 입력을 최대한 빨리 받는 방법")
+# readline() = input()함수를 통한 시간 초과를 방지하기 위한 빠른 함수
+# 반드시 sys 라이브러리를 import 해야함
+print("import sys")
+# rstrip() 함수를 통해 줄 바꿈 제거
+print("data = sys.stdin.readline().rstrip()")
+print("print(data)")
+
+# 출력
+print("-----------------------")
+# f-string = 변수 출력시 공백 제거
+print("# f-string = 변수 출력시 공백 제거")
+answer=7
+print("정답은", answer, "입니다.")
+print(f"정답은 {answer}입니다.")
