@@ -80,7 +80,7 @@ print(array)
 print("# 2차원 리스트 초기화")
 n = 3
 m = 4
-array = [[0] * m for i in range(n)]
+array = [[0] * m for _ in range(n)]
 print(array)
 array[1][1] = 5
 print(array)
@@ -103,7 +103,7 @@ print("기본 리스트: ", a)
 a.append(2)
 print("삽입: ", a)
 
-# sort() = 변수명.sort() || 변수명.sort(reverse = True) = 오름차순, 내림차순 정렬
+# sort() = 변수명.sort() || 변수명.sort(reverse = True) = 오름차순 || 내림차순 정렬
 a.sort()
 print("오름차순 정렬: ", a)
 a.sort(reverse=True)
